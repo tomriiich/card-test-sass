@@ -1,0 +1,60 @@
+@import 'variables.scss';
+
+body {
+    margin: 0;
+    padding: 0;
+    @extend %display-flex;
+    justify-content: center;
+    .card {
+        @include movement($property);
+        @extend %display-flex;
+        flex-direction: column;
+        background-color: $primary-color;
+        border: 1px solid $secondary-color;
+        border-radius: 15% 5%;
+        margin: 1em;
+        padding: 1.5em;
+        width: 100%;
+        header {
+            @include movement($property-inv);
+            @extend %display-flex;
+            align-items: flex-start;
+            font-family: $sans-serif-font;
+            height: 6em;
+            div {
+                font-family: $sans-serif-font;
+                h1 {
+                    color: $accent-color;
+                    margin-bottom: 0;
+                    &:hover {
+                        color: $secondary-color;
+                    }
+                }
+                h4 {
+                    color: $secondary-color;
+                    margin-top: 0;
+                }
+            }
+            img {
+                width: 1em + 9em;
+                margin-left: auto;
+            }
+        }
+        main {
+            @include movement($property-inv);
+            font-family: $serif-font;          
+        }
+        footer {
+            @include movement($property-inv);
+            background-color: $secondary-color;
+            padding: 0 1em 1em 1em;
+            box-sizing: border-box;
+            p {
+                color: whitesmoke;
+            }
+            a {
+                color: $accent-color;
+            }
+        }
+    }
+}

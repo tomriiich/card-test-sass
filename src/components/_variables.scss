@@ -1,0 +1,25 @@
+$sans-serif-font: Arial;
+$serif-font: Georgia;
+
+$primary-color: hsla(0, 50%, 75%, 1);
+$secondary-color: hsla(0, 50%, 25%, 1);
+$accent-color: hsla(0, 50%, 50%, 1);
+
+$property: rotate(2deg);
+$property-inv: rotate(-2deg);
+
+@mixin movement($property) {
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+}
+
+// This CSS will print because %message-shared is extended.
+%display-flex {
+    display: flex;
+}
+
+// This CSS won't print because %equal-heights is never extended.
+%display-grid {
+    display: grid;
+}
